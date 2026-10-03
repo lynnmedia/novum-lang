@@ -1,6 +1,6 @@
 # Quickstart
 
-Use Python 3.9–3.14. In a clean environment, install the supplied wheel with `python -m pip install --no-index --no-deps ./novum_lang-0.2.0rc1-py3-none-any.whl`. The same archive includes the examples under `share/novum-lang/examples` when installed; an authorized reviewer may also read them directly from the source archive.
+Use Python 3.12 only for this preview. In a clean environment, install the supplied wheel with `python -m pip install --no-index --no-deps ./novum_lang-0.2.0rc1-py3-none-any.whl`. The same archive includes the examples under `share/novum-lang/examples` when installed; an authorized reviewer may also read them directly from the source archive.
 
 Run these commands from the unpacked source archive root:
 
