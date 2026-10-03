@@ -1,0 +1,7 @@
+# Scope and claims
+
+The preview supports the precise grammar, relation signatures, direct `remove`, `substitute`, `decompose`, and `reopen` transformations, inspection, validation, challenge, frontier, trace, reparsing replay, and `novum-dsc/0.1` export described in the specification. Branch identity arises from a declared mechanism and its `satisfies` relation; candidate lineage is an explicit `derives_from` relation. These are representation and deterministic behavior claims within the tested subset.
+
+`reject` and `reject_branch` are research-only. So are exploration, search policy, evidence-application, experiment, resume, autonomous trial, provider, and evaluation machinery. No stable candidate path imports them. The runtime performs shallow validation; it does not establish physical feasibility or scientific truth. It has no persistent workspace, full semantic equivalence with DSC, autonomous invention service, or cross-version language negotiation.
+
+IIE-005 was a contaminated, scope-limited provisional trial and did not support a Novum invention-rate advantage. IIE-009 did not test this Novum candidate and did not support Solution Quality, novelty, or transformation-operator gains. Historical composition findings apply only to their exact builds, protocol, models, judge, comparator, and problem set. This `novum-dsc/0.1` qualification establishes bounded software compatibility, not full semantic equivalence or efficacy. Generalization across models, interactive workflows, human collaboration, and real-world invention or productivity is untested.

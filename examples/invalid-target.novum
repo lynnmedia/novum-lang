@@ -1,0 +1,6 @@
+novum 0.2
+design MissingTarget
+mechanism M {
+  Directed light source
+}
+M satisfies AbsentFunction

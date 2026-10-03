@@ -1,0 +1,28 @@
+novum 0.2
+design BranchLineage
+need N {
+  Make a small work surface visible
+}
+function F {
+  Direct light toward the surface
+}
+mechanism LampPath {
+  A directed light source
+}
+concept CandidateA {
+  Initial lamp arrangement
+}
+concept CandidateB {
+  Revised lamp arrangement
+}
+claim Alignment {
+  Beam alignment is adequate
+}
+LampPath satisfies F
+CandidateA uses LampPath
+CandidateA satisfies F
+CandidateB derives_from CandidateA
+CandidateB uses LampPath
+CandidateB satisfies F
+CandidateB depends_on Alignment
+reopen Alignment

@@ -1,0 +1,121 @@
+{
+  "contract": "novum-dsc/0.1",
+  "problem": {
+    "name": "BranchLineage",
+    "novum_version": "0.2",
+    "needs": [
+      "N"
+    ],
+    "goals": [],
+    "functions": [
+      "F"
+    ],
+    "constraints": []
+  },
+  "entities": [
+    {
+      "id": "N",
+      "kind": "need",
+      "body": [
+        "Make a small work surface visible"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "F",
+      "kind": "function",
+      "body": [
+        "Direct light toward the surface"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "LampPath",
+      "kind": "mechanism",
+      "body": [
+        "A directed light source"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CandidateA",
+      "kind": "concept",
+      "body": [
+        "Initial lamp arrangement"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CandidateB",
+      "kind": "concept",
+      "body": [
+        "Revised lamp arrangement"
+      ],
+      "status": "stale"
+    },
+    {
+      "id": "Alignment",
+      "kind": "claim",
+      "body": [
+        "Beam alignment is adequate"
+      ],
+      "status": "reopened"
+    }
+  ],
+  "relations": [
+    {
+      "source": "LampPath",
+      "relation": "satisfies",
+      "target": "F"
+    },
+    {
+      "source": "CandidateA",
+      "relation": "uses",
+      "target": "LampPath"
+    },
+    {
+      "source": "CandidateA",
+      "relation": "satisfies",
+      "target": "F"
+    },
+    {
+      "source": "CandidateB",
+      "relation": "derives_from",
+      "target": "CandidateA"
+    },
+    {
+      "source": "CandidateB",
+      "relation": "uses",
+      "target": "LampPath"
+    },
+    {
+      "source": "CandidateB",
+      "relation": "satisfies",
+      "target": "F"
+    },
+    {
+      "source": "CandidateB",
+      "relation": "depends_on",
+      "target": "Alignment"
+    }
+  ],
+  "tensions": [],
+  "mechanisms": [
+    {
+      "id": "LampPath",
+      "description": "A directed light source",
+      "satisfies": [
+        "F"
+      ],
+      "activates_tensions": []
+    }
+  ],
+  "obligations": [],
+  "evidence": [],
+  "provenance": {
+    "source_file": "examples/branch-lineage-reopen.novum",
+    "exporter_version": "novum/0.2.0rc1",
+    "entity_count": 6,
+    "relation_count": 7
+  }
+}

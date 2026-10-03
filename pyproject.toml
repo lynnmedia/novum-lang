@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novum-lang"
+version = "0.2.0rc1"
+description = "Bounded Novum supported-subset RC1 preview"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "LicenseRef-SEE-LICENSE-MAP"
+authors = [{name = "Lynn Walker"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+novum = "novum:main"
+
+[tool.setuptools]
+py-modules = ["novum"]
+package-dir = {"" = "src"}
+include-package-data = false
+license-files = []
+
+[tool.setuptools.data-files]
+"share/novum-lang" = ["RELEASE-STATUS.md", "CITATION.cff", "LICENSE-MAP.md", "README.md", "SECURITY.md"]
+"share/novum-lang/docs" = ["docs/COMPATIBILITY.md", "docs/QUICKSTART.md", "docs/REFERENCE.md", "docs/SCOPE.md", "docs/SPECIFICATION.md", "docs/VALIDATION.md"]
+"share/novum-lang/examples" = ["examples/minimal-valid.novum", "examples/invalid-target.novum", "examples/branch-lineage-reopen.novum", "examples/branch-lineage-reopen.novum-dsc.json"]
+"share/novum-lang/LICENSES" = ["LICENSES/Apache-2.0.txt", "LICENSES/CC-BY-4.0.txt"]
+"share/novum-lang/tests" = ["tests/test_candidate.py"]

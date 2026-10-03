@@ -1,0 +1,12 @@
+novum 0.2
+design QuietLamp
+need N {
+  See a desk edge in a dark room
+}
+function F {
+  Illuminate a small surface
+}
+mechanism M {
+  Directed light source
+}
+M satisfies F

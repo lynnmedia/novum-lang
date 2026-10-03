@@ -1,0 +1,9 @@
+# `novum-dsc/0.1` compatibility
+
+Producer: Novum `0.2.0rc1` bounded preview. Consumer: DSC Core `0.2.0rc1` bounded preview from the same coordinated release. The marker `novum-dsc/0.1` is unchanged. Novum exports without a DSC dependency.
+
+DSC requires `contract`, `problem` with a nonempty name, `entities`, `relations`, `tensions`, and `mechanisms`; Novum also emits `obligations`, `evidence`, and `provenance`. Entity order and relation order follow the final Novum graph. The first need, functions, and constraints lower directly. Goals, assumptions, unknowns, tensions, and mechanisms lower to prefixed DSC declarations. A mechanism's `satisfies` relation can lower to `branch_<mechanism-id>`. Concepts, claims, tests, static evidence, decisions, additional needs, other relations, and the extra sections remain in ledger sidecars without DSC executable semantics.
+
+DSC groups declaration kinds, normalizes some identifiers, joins need body lines, and may synthesize a need. Its ledger retains the full `source_contract_snapshot` and mapping records. Check `summary.reconciliation` and zero `UNMAPPED_LOSS` and `silent_semantic_losses`; zero loss means accounted for, not semantic equivalence. The Novum source path appears in provenance and affects export bytes. The JSON contains no built-in digest.
+
+Unsupported markers, missing or malformed consumed sections, duplicate entity IDs, and lowered identity collisions fail before workspace creation. For example, `goal X` and `function goal_X` collide. An occupied target fails without destroying it, including when force-replacement fails. DSC CLI import failures use exit 4 for contract errors; compiler failures use exit 3. The importer is bounded, not a universal schema or full graph validator. Compatibility is limited to the coordinated versioned release builds and does not establish creativity, novelty, Solution Quality, invention yield, or productivity.
